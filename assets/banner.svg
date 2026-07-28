@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b2f2c"/>
+      <stop offset="55%" stop-color="#0d3b35"/>
+      <stop offset="100%" stop-color="#052824"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="78%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#25D366" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#25D366" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="phoneBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f4b45"/>
+      <stop offset="100%" stop-color="#0f2b27"/>
+    </linearGradient>
+    <linearGradient id="bubbleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#25D366"/>
+      <stop offset="100%" stop-color="#128C7E"/>
+    </linearGradient>
+    <linearGradient id="lineFade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#25D366" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#25D366" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="360" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="360" fill="url(#glow)"/>
+
+  <!-- faint dot grid for texture -->
+  <g fill="#25D366" opacity="0.08">
+    <circle cx="80" cy="60" r="2"/>
+    <circle cx="140" cy="60" r="2"/>
+    <circle cx="200" cy="60" r="2"/>
+    <circle cx="80" cy="120" r="2"/>
+    <circle cx="140" cy="120" r="2"/>
+    <circle cx="200" cy="120" r="2"/>
+    <circle cx="80" cy="180" r="2"/>
+    <circle cx="140" cy="180" r="2"/>
+    <circle cx="200" cy="180" r="2"/>
+  </g>
+
+  <!-- broadcast lines from phone to contacts -->
+  <g stroke="url(#lineFade)" stroke-width="2" fill="none" opacity="0.7">
+    <path d="M 900 150 Q 1000 90 1080 60"/>
+    <path d="M 905 165 Q 1010 165 1100 165"/>
+    <path d="M 900 185 Q 1000 240 1075 265"/>
+    <path d="M 895 140 Q 970 60 1030 45"/>
+    <path d="M 895 195 Q 960 280 1015 300"/>
+  </g>
+
+  <!-- contact nodes with small chat bubbles -->
+  <g>
+    <circle cx="1080" cy="60" r="16" fill="url(#bubbleGrad)"/>
+    <path d="M 1072 56 h 16 v 8 l -5 -3 h -11 z" fill="#0b2f2c" opacity="0.5"/>
+
+    <circle cx="1100" cy="165" r="16" fill="url(#bubbleGrad)"/>
+    <path d="M 1092 161 h 16 v 8 l -5 -3 h -11 z" fill="#0b2f2c" opacity="0.5"/>
+
+    <circle cx="1075" cy="265" r="16" fill="url(#bubbleGrad)"/>
+    <path d="M 1067 261 h 16 v 8 l -5 -3 h -11 z" fill="#0b2f2c" opacity="0.5"/>
+
+    <circle cx="1030" cy="45" r="11" fill="#128C7E" opacity="0.9"/>
+    <circle cx="1015" cy="300" r="11" fill="#128C7E" opacity="0.9"/>
+  </g>
+
+  <!-- phone silhouette representing the sender -->
+  <g transform="translate(780,90)">
+    <rect x="0" y="0" width="120" height="200" rx="18" fill="url(#phoneBody)" stroke="#25D366" stroke-width="2" opacity="0.95"/>
+    <rect x="10" y="18" width="100" height="150" rx="6" fill="#052824"/>
+    <circle cx="60" cy="188" r="6" fill="#25D366" opacity="0.6"/>
+    <!-- chat bubbles inside screen -->
+    <rect x="18" y="30" width="55" height="16" rx="8" fill="#128C7E"/>
+    <rect x="40" y="52" width="60" height="16" rx="8" fill="#25D366"/>
+    <rect x="18" y="74" width="45" height="16" rx="8" fill="#128C7E"/>
+    <rect x="45" y="96" width="55" height="16" rx="8" fill="#25D366"/>
+    <rect x="18" y="118" width="50" height="16" rx="8" fill="#128C7E"/>
+  </g>
+
+  <!-- subtle bottom wave / signal arcs -->
+  <g stroke="#25D366" stroke-width="1.5" fill="none" opacity="0.25">
+    <path d="M 60 320 Q 300 260 600 320 T 1140 320"/>
+    <path d="M 60 335 Q 300 285 600 335 T 1140 335"/>
+  </g>
+
+  <!-- Headline -->
+  <text x="60" y="150" font-family="'Segoe UI', Arial, sans-serif" font-size="72" font-weight="700" fill="#f2fff9">
+    <tspan x="60" y="150" textLength="700" lengthAdjust="spacingAndGlyphs">WhatsApp Bulk</tspan>
+    <tspan x="60" y="230" textLength="360" lengthAdjust="spacingAndGlyphs">Sender</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="60" y="272" font-family="'Segoe UI', Arial, sans-serif" font-size="22" fill="#bfe9dc" textLength="700" lengthAdjust="spacingAndGlyphs">
+    Send bulk WhatsApp messages to multiple contacts
+  </text>
+  <text x="60" y="300" font-family="'Segoe UI', Arial, sans-serif" font-size="22" fill="#bfe9dc" textLength="560" lengthAdjust="spacingAndGlyphs">
+    with automated scheduling and templates
+  </text>
+</svg>
